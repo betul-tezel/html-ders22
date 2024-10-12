@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+HTML’de tablo oluşturmak, verileri düzenli bir şekilde sunmak için etkili bir yöntemdir. Tablo oluşturmak için <table>, <tr>, <td> ve <th> etiketleri kullanılır. İşte HTML tablolarının detaylı bir açıklaması:
+
+    Temel Yapı
+    HTML'de bir tablo oluşturmak için şu temel yapıyı kullanırız:
+    
+   
+    <table>
+        <tr>
+            <th>Başlık 1</th>
+            <th>Başlık 2</th>
+        </tr>
+        <tr>
+            <td>Veri 1</td>
+            <td>Veri 2</td>
+        </tr>
+    </table>
+    <table>: Tabloyu tanımlar.
+    <tr>: Tablo satırını tanımlar (table row).
+    <th>: Tablo başlığını tanımlar (table header). Genellikle kalın ve ortalanmış olarak görünür.
+    <td>: Tablo hücresini tanımlar (table data).
+    Tablo Oluşturma Adımları
+    Tablo Başlıkları: Tablo başlıklarını tanımlamak için <th> etiketlerini kullanırız. Bu başlıklar genellikle ilk satırda yer alır.
+    
+    Tablo Verileri: Her satırda verileri temsil etmek için <td> etiketlerini kullanırız.
+    
+    Örnek Tablo
+    Aşağıda bir tablo oluşturma örneği verilmiştir:
+    
+    
+    <table border="1">
+        <tr>
+            <th>İsim</th>
+            <th>Yaş</th>
+            <th>Şehir</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>İstanbul</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Ankara</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>İzmir</td>
+        </tr>
+    </table>
+    Tablo Özellikleri
+    Sınır (Border): Tablo sınırını belirtmek için border özniteliği kullanılır. Yukarıdaki örnekte border="1" kullanarak tablonun etrafında bir kenarlık oluşturduk.
+    
+    Hücre Genişliği ve Yüksekliği: width ve height öznitelikleri ile hücrelerin boyutlarını ayarlayabiliriz.
+    
+    html
+    Kodu kopyala
+    <td width="100">Veri</td>
+    Hücre Birleştirme: Bazı durumlarda hücreleri birleştirmek isteyebiliriz. Bunu colspan ve rowspan öznitelikleri ile yaparız.
+    
+    colspan: Bir hücrenin kaç sütunu kapsayacağını belirtir.
+    rowspan: Bir hücrenin kaç satırı kapsayacağını belirtir.
+    Örnek:
+    
+    html
+    Kodu kopyala
+    <tr>
+        <td colspan="2">Büyük Hücre</td>
+        <td>Veri 3</td>
+    </tr>
+    Yukarıdaki örnek, ilk hücrenin iki sütunu kapsadığı bir satır oluşturur.
+    
+    Tablo Başlıkları ve Grubu: Tablo başlıkları grubu oluşturmak için <thead>, tablo gövdesi için <tbody>, ve toplamlar için <tfoot> etiketlerini kullanabiliriz. Bu, tablonun daha düzenli ve erişilebilir olmasını sağlar.
+    
+   
+    <table>
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    CSS ile Stil Ekleme
+    Tabloları daha estetik hale getirmek için CSS kullanabiliriz. Örneğin:
+    
+    
+    
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Kenarları birleştirir */
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px; /* Hücre içindeki boşluk */
+        text-align: left; /* Metin hizalaması */
+    }
+    th {
+        background-color: #f2f2f2; /* Başlık arka plan rengi */
+    }
+    tr:hover {
+        background-color: #f5f5f5; /* Fare ile üzerine gelindiğinde arka plan rengi değişir */
+    }
+    </style>
+    Tam Örnek
+    Aşağıda tüm özellikleri içeren bir tablo örneği verilmiştir:
+    
+  
+   
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablo Örneği</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Öğrenci Bilgileri</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>Yaş</th>
+                    <th>Şehir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alice</td>
+                    <td>30</td>
+                    <td>İstanbul</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>25</td>
+                    <td>Ankara</td>
+                </tr>
+                <tr>
+                    <td>Charlie</td>
+                    <td>35</td>
+                    <td>İzmir</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    </html>
+    Bu örnek, HTML tablolarının nasıl oluşturulacağını, stil verileceğini ve verilerin düzenli bir şekilde nasıl sunulacağını gösterir. Tablolar, verileri görsel olarak düzenlemek ve kullanıcılara daha iyi bir deneyim sağlamak için çok faydalıdır.
+    
+    
+    
+    
+    
+    
+    
