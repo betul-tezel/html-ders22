@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+HTML'de bağlantılar (linkler) oluşturmak için <a> (anchor) etiketini kullanırız. Bu etiket, metni veya resmi tıklanabilir hale getirir ve kullanıcıları belirli bir URL'ye yönlendirir. İşte HTML bağlantılarının detaylı bir açıklaması:
+
+    Temel Bağlantı Yapısı
+    Temel bir bağlantı oluşturmak için aşağıdaki yapı kullanılır:
+    
+    html
+    Kodu kopyala
+    <a href="https://www.ornek.com">Tıklayın</a>
+    <a>: Bağlantıyı tanımlar.
+    href: Bağlantının gideceği URL'yi belirtir.
+    Metin: Kullanıcının göreceği ve tıklayacağı metin.
+    Hedef Belirleme
+    Bağlantının tıkladıktan sonra nasıl açılacağını belirlemek için target özniteliğini kullanabiliriz:
+    
+    _self: Bağlantı aynı sekmede açılır (varsayılan).
+    _blank: Bağlantı yeni bir sekmede açılır.
+    _parent: Bağlantı üst çerçevede açılır.
+    _top: Bağlantı tüm çerçeveleri kapsayan en üst düzeyde açılır.
+    Örnek:
+    
+    html
+    Kodu kopyala
+    <a href="https://www.ornek.com" target="_blank">Yeni Sekmede Aç</a>
+    Bağlantı Türleri
+    Dış Bağlantılar: Başka bir web sitesine yönlendiren bağlantılar.
+    
+    html
+    Kodu kopyala
+    <a href="https://www.dışsite.com">Dış Site</a>
+    İç Bağlantılar: Aynı web sitesindeki başka bir sayfaya yönlendiren bağlantılar.
+    
+    html
+    Kodu kopyala
+    <a href="/sayfa2.html">Sayfa 2'ye Git</a>
+    Ankraj Bağlantıları: Sayfanın belirli bir bölümüne yönlendiren bağlantılar. Öncelikle hedef alanı tanımlamak için bir id özniteliği ekleriz.
+    
+    html
+    Kodu kopyala
+    <h2 id="bölüm1">Bölüm 1</h2>
+    <a href="#bölüm1">Bölüm 1'e Git</a>
+    Bağlantıya Stil Ekleme
+    CSS kullanarak bağlantılara stil ekleyebiliriz. Örneğin:
+    
+    html
+    Kodu kopyala
+    <style>
+    a {
+        color: blue;
+        text-decoration: none; /* Alt çizgiyi kaldırır */
+    }
+    a:hover {
+        color: red; /* Üzerine gelindiğinde rengi değiştirir */
+    }
+    </style>
+    Resim ile Bağlantı
+    Bir resmi tıklanabilir hale getirmek için resmi <a> etiketi içine alırız:
+    
+    html
+    Kodu kopyala
+    <a href="https://www.ornek.com">
+        <img src="resim.jpg" alt="Açıklama">
+    </a>
+    Bağlantıya Açıklama Ekleme
+    title özniteliği ile bağlantı üzerine gelindiğinde görünen açıklama ekleyebiliriz:
+    
+    html
+    Kodu kopyala
+    <a href="https://www.ornek.com" title="Bu bir örnek bağlantısıdır">Tıklayın</a>
+    Erişilebilirlik
+    Erişilebilirlik açısından, bağlantı metinleri anlamlı olmalı ve kullanıcıya bağlantının neye yönlendirdiği hakkında bilgi vermelidir. Örneğin, "Buraya tıklayın" yerine "Daha fazla bilgi için buraya tıklayın" ifadesi tercih edilmelidir.
+    
+    Örnek Uygulama
+    Aşağıda tüm bu öğeleri bir araya getiren basit bir örnek bulunmaktadır:
+    
+    html
+    Kodu kopyala
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bağlantı Örnekleri</title>
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+            a:hover {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bağlantı Örnekleri</h1>
+        <p><a href="https://www.dışsite.com" target="_blank" title="Dış siteye git">Dış Site</a></p>
+        <p><a href="#bölüm1">Bölüm 1'e Git</a></p>
+        <h2 id="bölüm1">Bölüm 1</h2>
+        <p>Burada içerik yer alacak.</p>
+        <p><a href="https://www.ornek.com">
+            <img src="resim.jpg" alt="Örnek Resim">
+        </a></p>
+    </body>
+    </html>
+    Bu örnek, bağlantıların nasıl kullanılacağını ve stillendirileceğini gösterir. HTML'deki bağlantılar, web sayfalarını birbirine bağlamanın temel yoludur ve kullanıcı deneyimini zenginleştirir.
+    
+    
+    
+    
