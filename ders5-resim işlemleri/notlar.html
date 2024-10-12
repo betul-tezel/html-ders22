@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+HTML'de resim işlemleri, web sayfalarında görsel içerik eklemek için oldukça önemlidir. İşte temel kavramlar ve uygulamalar:
+
+1. Resim Ekleme
+HTML'de bir resim eklemek için <img> etiketi kullanılır. Bu etiketin en önemli özellikleri şunlardır:
+
+src: Resmin kaynağını (URL) belirtir.
+alt: Resim yüklenmediğinde ya da erişilebilirlik amacıyla gösterilecek alternatif metni belirtir.
+width ve height: Resmin genişlik ve yükseklik değerlerini belirler (isteğe bağlı).
+Örnek:
+
+html
+Kodu kopyala
+<img src="resim.jpg" alt="Açıklayıcı metin" width="300" height="200">
+2. Resim Formatları
+Web'de en yaygın kullanılan resim formatları:
+
+JPEG (.jpg, .jpeg): Fotoğraflar için ideal, kayıplı sıkıştırma kullanır.
+PNG (.png): Şeffaf arka plan desteği sağlar, kayıpsız sıkıştırma kullanır.
+GIF (.gif): Animasyonlu görseller için kullanılır, sınırlı renk paleti vardır.
+SVG (.svg): Vektör tabanlı grafikler için idealdir, ölçeklenebilir.
+3. Resim Boyutlandırma ve Duyarlılık
+Resimleri doğru boyutlandırmak, sayfa yükleme sürelerini etkileyebilir. Duyarlı tasarım için CSS kullanarak resimlerin boyutlarını ayarlamak iyi bir uygulamadır.
+
+Örnek:
+
+html
+Kodu kopyala
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+4. Resimlerin Konumlandırılması
+CSS ile resimlerin konumunu ayarlamak mümkündür. Aşağıdaki örnek, bir resmi ortalamak için kullanılır:
+
+html
+Kodu kopyala
+<style>
+  .container {
+    text-align: center;
+  }
+</style>
+
+<div class="container">
+  <img src="resim.jpg" alt="Açıklayıcı metin">
+</div>
+5. Resim Galerileri
+Birden fazla resmi düzenlemek için galeriler oluşturabilirsiniz. CSS ve JavaScript kullanarak interaktif galeriler tasarlamak yaygındır.
+
+Basit Galeri Örneği:
+
+html
+Kodu kopyala
+<style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery img {
+    width: 30%;
+    margin: 1%;
+  }
+</style>
+
+<div class="gallery">
+  <img src="resim1.jpg" alt="Resim 1">
+  <img src="resim2.jpg" alt="Resim 2">
+  <img src="resim3.jpg" alt="Resim 3">
+</div>
+6. Erişilebilirlik
+Resimlerin erişilebilirliği için alt metnini kullanmak önemlidir. Bu, ekran okuyucu kullanan kişiler için yararlıdır.
+
+7. Resim Üzerinde Etkileşim
+JavaScript ile resimlere tıklama gibi etkileşimler eklemek mümkündür. Aşağıda bir örnek bulunmaktadır:
+
+html
+Kodu kopyala
+<img src="resim.jpg" alt="Açıklayıcı metin" onclick="alert('Resme tıklandı!')">
+Sonuç
+HTML'de resim işlemleri, görsel içerik eklemek ve düzenlemek için çeşitli yöntemler sunar. Doğru format, boyutlandırma ve erişilebilirlik uygulamaları ile kullanıcı deneyimini geliştirebilirsiniz.
+
+
+
