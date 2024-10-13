@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+HTML ile ses ve video işlemleri, web sayfalarına medya içeriklerini entegre etmenin temel yollarıdır. Bu işlemler genellikle <audio> ve <video> etiketleri kullanılarak yapılır. Şimdi bu etiketleri detaylı olarak inceleyelim.
+
+    1. Ses (Audio) İşlemleri
+    HTML5 ile birlikte, ses dosyalarını web sayfalarına kolayca entegre edebiliriz. Bunun için <audio> etiketi kullanılır.
+    
+    Temel Kullanım
+    html
+    Kodu kopyala
+    <audio controls>
+        <source src="ses-dosyasi.mp3" type="audio/mpeg">
+        <source src="ses-dosyasi.ogg" type="audio/ogg">
+        Tarayıcınız audio etiketi desteklemiyor.
+    </audio>
+    controls: Ses çalma kontrol düğmelerini (play, pause, ses seviyesi) gösterir.
+    <source>: Farklı formatlarda ses dosyası eklemek için kullanılır. Tarayıcı, desteklediği formatı oynatır.
+    type: Ses dosyasının formatını belirtir.
+    Diğer Özellikler
+    autoplay: Ses dosyası sayfa yüklendiğinde otomatik olarak oynatılır.
+    loop: Ses dosyası bittiğinde tekrar başa döner.
+    muted: Ses başlangıçta kapalıdır.
+    Örnek
+    html
+    Kodu kopyala
+    <audio controls autoplay loop muted>
+        <source src="müzik.mp3" type="audio/mpeg">
+        Tarayıcınız audio etiketi desteklemiyor.
+    </audio>
+    2. Video İşlemleri
+    HTML5 ile videoları da benzer şekilde entegre edebiliriz. Bunun için <video> etiketi kullanılır.
+    
+    Temel Kullanım
+    html
+    Kodu kopyala
+    <video width="640" height="360" controls>
+        <source src="video-dosyasi.mp4" type="video/mp4">
+        <source src="video-dosyasi.webm" type="video/webm">
+        Tarayıcınız video etiketi desteklemiyor.
+    </video>
+    width ve height: Videonun görüntüleneceği boyutları belirler.
+    controls: Video çalma kontrol düğmelerini gösterir.
+    Diğer Özellikler
+    autoplay: Video sayfa yüklendiğinde otomatik olarak oynatılır.
+    loop: Video bittiğinde tekrar başa döner.
+    muted: Video başlangıçta ses kapalıdır.
+    poster: Video yüklenmeden önce gösterilecek resim.
+    Örnek
+    html
+    Kodu kopyala
+    <video width="640" height="360" controls autoplay loop muted poster="video-poster.jpg">
+        <source src="film.mp4" type="video/mp4">
+        Tarayıcınız video etiketi desteklemiyor.
+    </video>
+    3. Tarayıcı Desteği
+    Her ne kadar modern tarayıcılar çoğu ses ve video formatını desteklese de, kullanıcı deneyimini artırmak için farklı formatlar eklemek önemlidir. Örneğin:
+    
+    Ses Formatları: MP3, OGG, WAV
+    Video Formatları: MP4, WebM, OGG
+    4. Erişilebilirlik
+    Medya içerikleri oluştururken erişilebilirliği göz önünde bulundurmak önemlidir. Aşağıdaki yöntemleri kullanarak erişilebilirliği artırabilirsiniz:
+    
+    transkript: Ses dosyaları için metin dosyaları sağlamak.
+    altyazı: Video dosyaları için altyazı dosyaları (WebVTT formatında) eklemek.
+    Sonuç
+    HTML ile ses ve video işlemleri, web sayfalarını daha etkileşimli ve çekici hale getirir. Bu etiketlerin ve özelliklerinin kullanımı, kullanıcı deneyimini artırmak için oldukça önemlidir. Medya içeriklerini entegre ederken, farklı formatlar kullanmak ve erişilebilirliği göz önünde bulundurmak en iyi uygulamalardandır.
+    
+    
+    
+    
+    
+    
+    
