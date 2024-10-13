@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+HTML form işlemleri, web uygulamalarında kullanıcıdan veri almak için kullanılır. Formlar, kullanıcıların veri girişi yapmasını ve bu verilerin sunucuya gönderilmesini sağlar. İşte HTML form işlemlerinin detaylı bir açıklaması:
+
+1. HTML Form Yapısı
+HTML'de bir form oluşturmak için <form> etiketini kullanırız. Form, kullanıcıdan veri toplamak için çeşitli giriş türlerini içerebilir.
+
+html
+Kodu kopyala
+<form action="sunucu_adresi" method="POST">
+    <!-- Form elemanları buraya gelecek -->
+</form>
+action: Form gönderildiğinde verilerin gönderileceği URL'yi belirtir.
+method: Verilerin gönderim yöntemini belirtir (genellikle GET veya POST).
+2. Form Elemanları
+Form elemanları, kullanıcının veri girmesi için çeşitli türlerdedir:
+
+Metin Kutusu: Kullanıcının metin girmesi için kullanılır.
+
+html
+Kodu kopyala
+<input type="text" name="kullanici_adi" placeholder="Kullanıcı Adı">
+Şifre Kutusu: Kullanıcının gizli bir metin girmesi için.
+
+html
+Kodu kopyala
+<input type="password" name="sifre" placeholder="Şifre">
+Seçim Kutuları: Kullanıcının belirli bir seçeneği seçmesini sağlar.
+
+html
+Kodu kopyala
+<select name="sehir">
+    <option value="istanbul">İstanbul</option>
+    <option value="ankara">Ankara</option>
+    <option value="izmir">İzmir</option>
+</select>
+Radyo Butonları: Kullanıcının birden fazla seçenekten birini seçmesini sağlar.
+
+html
+Kodu kopyala
+<input type="radio" name="cinsiyet" value="erkek"> Erkek
+<input type="radio" name="cinsiyet" value="kadin"> Kadın
+Onay Kutuları: Kullanıcıdan belirli bir durumu kabul etmesini sağlar.
+
+html
+Kodu kopyala
+<input type="checkbox" name="sartlar" value="onay"> Şartları kabul ediyorum
+Dosya Yükleme: Kullanıcının bir dosya yüklemesine olanak tanır.
+
+html
+Kodu kopyala
+<input type="file" name="dosya">
+Butonlar: Formu göndermek için kullanılır.
+
+html
+Kodu kopyala
+<button type="submit">Gönder</button>
+3. Form Verilerinin Gönderilmesi
+Form, kullanıcının verileri girmesinin ardından submit butonuna basılması ile gönderilir. Form verileri, belirlenen action URL'sine, method türüne göre (GET veya POST) gönderilir.
+
+GET Metodu: Veriler URL üzerinde gönderilir. Genellikle arama formlarında kullanılır.
+POST Metodu: Veriler, HTTP isteğinin gövdesinde gönderilir ve daha fazla veri taşıma kapasitesine sahiptir. Güvenli veriler (şifreler vb.) için önerilir.
+4. Form Doğrulama
+HTML formları, kullanıcı verilerini kontrol etmek için çeşitli doğrulama teknikleri kullanabilir. HTML5 ile birlikte, bazı temel doğrulama türleri eklenmiştir:
+
+Zorunlu Alan: Kullanıcının bir alanı doldurması gerektiğini belirtir.
+
+html
+Kodu kopyala
+<input type="text" name="kullanici_adi" required>
+E-posta Doğrulama: Kullanıcının geçerli bir e-posta adresi girmesini sağlar.
+
+html
+Kodu kopyala
+<input type="email" name="email" required>
+Numara Kontrolü: Kullanıcının sayısal bir değer girmesini zorunlu kılar.
+
+html
+Kodu kopyala
+<input type="number" name="yas" min="1" max="100">
+5. JavaScript ile Form İşlemleri
+JavaScript, form verilerini kontrol etmek, dinamik olarak form elemanları eklemek veya silmek için kullanılabilir.
+
+Örneğin, form gönderilmeden önce bazı kontroller yapmak:
+
+javascript
+Kodu kopyala
+document.querySelector('form').addEventListener('submit', function(event) {
+    var kullaniciAdi = document.querySelector('input[name="kullanici_adi"]').value;
+    if (kullaniciAdi === '') {
+        alert('Kullanıcı adı boş bırakılamaz!');
+        event.preventDefault(); // Formun gönderimini durdur
+    }
+});
+6. Sunucu Tarafı İşlemleri
+Form verileri, sunucu tarafında işlenmelidir. Sunucu, verileri alır, işler ve gerektiğinde yanıt gönderir. Bu işlem genellikle bir sunucu programlama dili (PHP, Python, Node.js vb.) ile yapılır.
+
+7. Örnek Form
+İşte basit bir HTML form örneği:
+
+html
+Kodu kopyala
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Form</title>
+</head>
+<body>
+    <form action="/gonder" method="POST">
+        <label for="kullanici_adi">Kullanıcı Adı:</label>
+        <input type="text" name="kullanici_adi" required>
+        
+        <label for="sifre">Şifre:</label>
+        <input type="password" name="sifre" required>
+        
+        <label for="sehir">Şehir:</label>
+        <select name="sehir">
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+        </select>
+        
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>
+Sonuç
+HTML form işlemleri, web uygulamalarının temel bileşenlerindendir. Kullanıcı etkileşimi için çeşitli form elemanları, doğrulama ve sunucu tarafı işlemleri ile kullanıcıdan veri almak mümkündür. Formların doğru bir şekilde yapılandırılması, kullanıcı deneyimini artırır ve veri güvenliğini sağlar.
+
+
+
