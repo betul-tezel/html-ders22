@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+1. CSS Nedir?
+CSS (Cascading Style Sheets), HTML belgelerinin görünümünü ve düzenini belirlemek için kullanılan bir stil dilidir. Renkler, yazı tipleri, kenar boşlukları ve daha fazlası üzerinde kontrol sağlar.
+
+2. Seçiciler (Selectors)
+CSS, hangi HTML öğelerine stil uygulayacağını belirlemek için seçiciler kullanır. Örneğin:
+
+p - Tüm <p> etiketlerini seçer.
+.class - Belirli bir sınıfa sahip öğeleri seçer.
+#id - Belirli bir kimliğe sahip öğeleri seçer.
+3. Özellikler ve Değerler
+CSS’de stil vermek için özellikler ve değerler kullanılır. Örneğin:
+
+css
+Kodu kopyala
+h1 {
+    color: blue; /* Yazı rengini mavi yapar */
+    font-size: 24px; /* Yazı boyutunu 24 piksel yapar */
+}
+4. Kutular Modeli (Box Model)
+Her HTML öğesi bir kutu olarak düşünülür. Kutunun bileşenleri:
+
+Margin: Dış boşluk.
+Border: Kenar.
+Padding: İç boşluk.
+Content: Gerçek içerik.
+5. Düzen (Layout)
+CSS ile öğeleri düzenlemek için çeşitli yöntemler vardır:
+
+Flexbox: Esnek düzenler oluşturur.
+Grid: İki boyutlu düzenler oluşturur.
+Positioning: Elemanların sayfadaki konumunu ayarlamak için kullanılır (static, relative, absolute, fixed).
+6. Responsive Tasarım
+Farklı ekran boyutlarına uyum sağlamak için medya sorguları kullanılır:
+
+css
+Kodu kopyala
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue; /* Ekran 600 pikselden küçükse arka plan rengini değiştirir */
+    }
+}
+7. CSS Dosya Yapısı
+CSS dosyaları genellikle .css uzantısına sahiptir ve HTML belgelerine <link> etiketi ile bağlanır:
+
+html
+Kodu kopyala
+<link rel="stylesheet" href="styles.css">
