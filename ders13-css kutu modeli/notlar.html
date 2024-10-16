@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+CSS kutu modeli, web sayfalarında öğelerin boyutlarını ve düzenini anlamak için temel bir kavramdır. Her HTML elementi, bir kutu olarak düşünülebilir ve bu kutunun belirli bileşenleri vardır. Kutu modeli, bir öğenin iç yapısını anlamak için önemli olan dört ana bileşenden oluşur:
+
+Margin (Dış Boşluk): Kutunun dışındaki alanı temsil eder. Diğer öğelerle olan mesafeyi ayarlar. Margin, öğenin dış kenarlarıyla diğer öğelerin dış kenarları arasındaki boşluktur.
+
+Border (Kenar Çizgisi): Kutunun etrafındaki çizgidir. Genellikle bir renk ve kalınlıkla tanımlanır. Border, kutunun iç ve dış kenarları arasındaki alandır.
+
+Padding (İç Boşluk): Kutunun iç kısmındaki alanı temsil eder. İçerik ile border arasındaki boşluktur. Padding, öğenin içeriği ile kenar çizgisi arasında ne kadar boşluk olacağını belirler.
+
+Content (İçerik): Kutunun en iç kısmıdır. Burada metin, resimler veya diğer HTML öğeleri bulunur.
+
+Kutu Modelinin Görselleştirilmesi
+css
+Kodu kopyala
+|-----------------------|  <- Margin
+|   |-----------------|   |
+|   |   Border        |   |  <- Border
+|   |   |-----------| |   |
+|   |   |  Padding  | |   |  <- Padding
+|   |   |   Content  |   |
+|   |   |-----------| |   |
+|   |   |           |   |
+|   |-----------------|   |
+|-----------------------|  <- Margin
+CSS ile Kutu Modelinin Kullanımı
+CSS ile bu bileşenleri ayarlamak için aşağıdaki özellikleri kullanabilirsiniz:
+
+Margin: margin: 20px; (tüm kenarlar için 20px dış boşluk)
+Padding: padding: 10px; (tüm kenarlar için 10px iç boşluk)
+Border: border: 2px solid black; (2px kalınlığında, siyah, düz bir kenar çizgisi)
+Örnek Uygulama
+Aşağıdaki örnekte bir div öğesinin kutu modelini gösteren bir CSS tanımı bulunmaktadır:
+
+html
+Kodu kopyala
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutu Modeli Örneği</title>
+    <style>
+        .kutu {
+            width: 300px; /* Genişlik */
+            height: 200px; /* Yükseklik */
+            margin: 20px; /* Dış boşluk */
+            padding: 15px; /* İç boşluk */
+            border: 5px solid blue; /* Kenar çizgisi */
+            background-color: lightgrey; /* Arka plan rengi */
+        }
+    </style>
+</head>
+<body>
+    <div class="kutu">
+        Bu bir kutu modelidir.
+    </div>
+</body>
+</html>
+Açıklama
+Genişlik ve Yükseklik: .kutu sınıfına sahip div öğesinin genişliği 300px ve yüksekliği 200px olarak ayarlandı.
+Margin: 20px dış boşluk, kutunun diğer öğelerden uzak olmasını sağladı.
+Padding: 15px iç boşluk, içeriğin kenar çizgisine olan mesafesini ayarladı.
+Border: 5px kalınlığında mavi bir kenar çizgisi oluşturuldu.
+Arka Plan Rengi: Kutunun arka planı açık gri olarak belirlendi.
+Bu örnek, CSS kutu modelinin öğelerin düzenlenmesindeki rolünü ve nasıl kullanılacağını gösterir. Bu model sayesinde, sayfa düzenini ve öğeler arasındaki ilişkiyi daha iyi kontrol edebilirsiniz.
+
+
+
