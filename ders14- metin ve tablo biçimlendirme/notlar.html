@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+1. Metin Biçimlendirme
+A. Yazı Tipi ve Boyutu
+Yazı Tipi: font-family
+css
+Kodu kopyala
+p {
+  font-family: Arial, sans-serif;
+}
+Yazı Boyutu: font-size
+css
+Kodu kopyala
+h1 {
+  font-size: 36px;
+}
+B. Yazı Renkleri
+Renk: color
+css
+Kodu kopyala
+p {
+  color: #333;
+}
+Arka Plan Rengi: background-color
+css
+Kodu kopyala
+.highlight {
+  background-color: yellow;
+}
+C. Yazı Ağırlığı ve Stili
+Yazı Ağırlığı: font-weight
+css
+Kodu kopyala
+strong {
+  font-weight: bold;
+}
+Yazı Stili: font-style
+css
+Kodu kopyala
+em {
+  font-style: italic;
+}
+D. Metin Hizalama
+Hizalama: text-align
+css
+Kodu kopyala
+h2 {
+  text-align: center;
+}
+E. Metin Dekorasyonu
+Alt Çizgi ve Üst Çizgi: text-decoration
+css
+Kodu kopyala
+a {
+  text-decoration: none; /* Bağlantılarda alt çizgiyi kaldırır */
+}
+F. Boşluk ve Satır Yüksekliği
+Satır Yüksekliği: line-height
+css
+Kodu kopyala
+p {
+  line-height: 1.5;
+}
+Boşluk: margin ve padding kullanarak metin etrafındaki boşluklar ayarlanabilir.
+2. Tablo Biçimlendirme
+A. Temel Tablo Yapısı
+HTML'de bir tablo aşağıdaki gibi tanımlanır:
+
+html
+Kodu kopyala
+<table>
+  <tr>
+    <th>Başlık 1</th>
+    <th>Başlık 2</th>
+  </tr>
+  <tr>
+    <td>Veri 1</td>
+    <td>Veri 2</td>
+  </tr>
+</table>
+B. Tablo Biçimlendirme Özellikleri
+Tablo Genişliği ve Yüksekliği: width, height
+css
+Kodu kopyala
+table {
+  width: 100%;
+  border-collapse: collapse; /* Kenarları birleştirir */
+}
+C. Kenar ve Hücre Biçimlendirmesi
+Kenar Rengi ve Kalınlığı: border
+css
+Kodu kopyala
+th, td {
+  border: 1px solid #ccc;
+}
+Hücre İçeriği Hizalama: text-align
+css
+Kodu kopyala
+th {
+  text-align: left;
+}
+D. Hücre Boşluğu ve Doldurma
+Hücre İç Boşluğu: padding
+css
+Kodu kopyala
+td {
+  padding: 10px;
+}
+E. Arka Plan Renkleri
+Satır ve Hücre Renkleri: background-color
+css
+Kodu kopyala
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternatif satır renkleri */
+}
+F. Tablo Başlıkları
+Tablo Başlığı: caption
+css
+Kodu kopyala
+caption {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+3. Örnek CSS Kodları
+İşte metin ve tablo biçimlendirmelerini bir arada kullanan örnek bir CSS:
+
+css
+Kodu kopyala
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.caption {
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+4. Sonuç
+CSS ile metin ve tablo biçimlendirmesi, web sayfalarının hem görsel hem de işlevsel olarak etkileyici olmasına katkı sağlar. Doğru biçimlendirme ile kullanıcı deneyimi büyük ölçüde iyileştirilebilir.
+
+
+
+

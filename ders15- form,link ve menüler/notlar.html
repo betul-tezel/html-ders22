@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+1. Formlar
+Formlar, kullanıcıdan veri toplamak için kullanılan HTML bileşenleridir. CSS ile formları stilize ederek daha çekici hale getirebiliriz. İşte temel bileşenler:
+
+HTML Form Yapısı
+html
+Kodu kopyala
+<form action="/submit" method="post">
+  <label for="name">Adınız:</label>
+  <input type="text" id="name" name="name" required>
+  
+  <label for="email">E-posta:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <input type="submit" value="Gönder">
+</form>
+CSS ile Stil Verme
+css
+Kodu kopyala
+form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+2. Linkler
+Linkler, kullanıcıların web sayfalarında gezinmesini sağlar. CSS ile linkleri stilize ederek daha etkileyici hale getirebiliriz.
+
+HTML Link Yapısı
+html
+Kodu kopyala
+<a href="https://www.example.com" class="link">Örnek Siteye Git</a>
+CSS ile Stil Verme
+css
+Kodu kopyala
+.link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+.link:visited {
+  color: #8e44ad;
+}
+3. Menüler
+Menüler, web sayfalarında gezinmeyi kolaylaştıran önemli bileşenlerdir. CSS ile menülerin görünümünü ve etkileşimini geliştirebiliriz.
+
+HTML Menü Yapısı
+html
+Kodu kopyala
+<nav>
+  <ul class="menu">
+    <li><a href="#home">Ana Sayfa</a></li>
+    <li><a href="#about">Hakkında</a></li>
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#contact">İletişim</a></li>
+  </ul>
+</nav>
+CSS ile Stil Verme
+css
+Kodu kopyala
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+Özet
+Formlar: Kullanıcıdan veri toplamak için kullanılır. CSS ile stil vererek daha çekici hale getirebilirsiniz.
+Linkler: Sayfalar arası geçiş sağlar. Stil vererek etkileşimi artırabilirsiniz.
+Menüler: Navigasyonu kolaylaştırır. Stil ile daha kullanıcı dostu ve estetik hale getirilebilir.
+Bu bileşenleri bir araya getirerek şık ve işlevsel web sayfaları oluşturabilirsiniz. Her bileşenin CSS ile özelleştirilmesi, kullanıcı deneyimini önemli ölçüde iyileştirir.
+
+
+
