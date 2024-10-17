@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+JavaScript, web sayfalarına etkileşim ve dinamiklik ekleyen, çok yönlü ve yaygın bir programlama dilidir. HTML ve CSS ile birlikte çalışarak modern web geliştirmede önemli bir rol oynar. JavaScript, kullanıcı deneyimini zenginleştirmek için kullanılır.
+
+Avantajları
+Etkileşimli İçerik: Kullanıcı etkileşimlerine anında yanıt verebilir.
+Taşınabilirlik: Tarayıcıda çalışır, bu nedenle kullanıcıların herhangi bir ek yazılım yüklemesine gerek yoktur.
+Geniş Topluluk ve Kütüphaneler: React, Angular, Vue.js gibi birçok popüler kütüphane ve çerçeve mevcuttur.
+Asenkron Programlama: AJAX ve Fetch API gibi özelliklerle veri alımı asenkron bir şekilde yapılabilir, bu da sayfa yenilemeden içerik güncellemeyi mümkün kılar.
+Hızlı Geliştirme: Kolay öğrenim ve hızlı prototipleme imkanı sunar.
+Örnek Kodlar
+1. Temel Değişken Kullanımı
+javascript
+Kodu kopyala
+let sayi1 = 5;
+let sayi2 = 10;
+let toplam = sayi1 + sayi2;
+
+console.log("Toplam: " + toplam);
+2. Fonksiyon Tanımlama ve Kullanma
+javascript
+Kodu kopyala
+function carpma(x, y) {
+    return x * y;
+}
+
+console.log("Çarpım: " + carpma(4, 5));
+3. Dizi ve Döngü Kullanımı
+javascript
+Kodu kopyala
+let sehirler = ["İstanbul", "Ankara", "İzmir"];
+
+for (let i = 0; i < sehirler.length; i++) {
+    console.log(sehirler[i]);
+}
+4. Koşullu İfade
+javascript
+Kodu kopyala
+let sicaklik = 30;
+
+if (sicaklik > 25) {
+    console.log("Hava sıcak!");
+} else {
+    console.log("Hava serin.");
+}
+5. DOM Manipülasyonu ve Olay Yönetimi
+html
+Kodu kopyala
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Olay Örneği</title>
+</head>
+<body>
+    <button id="clickButton">Bana Tıkla!</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("clickButton").onclick = function() {
+            document.getElementById("message").innerText = "Butona tıkladınız!";
+        };
+    </script>
+</body>
+</html>
